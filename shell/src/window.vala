@@ -1,6 +1,10 @@
 using Gtk;
 
 class PanelWindow : Gtk.ApplicationWindow {
+	Applet[] bar_items = {
+		new AppsListApplet()
+	};
+	
 	public PanelWindow(ShellApplication this_app) {
 		Object(application: this_app);
 		
@@ -9,36 +13,24 @@ class PanelWindow : Gtk.ApplicationWindow {
 		int displayHeight = Gdk.Display.get_default().get_monitor_at_window(this.get_window()).get_geometry().height;
 	
 		// Create the bar
-		Gtk.Box root = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
 		Gtk.HeaderBar bar = new Gtk.HeaderBar();
-		root.pack_start(bar, false);
-		this.add(root);
+		this.add(bar);
 
 		// Add content to the panel
 		populate_bar(bar);
 
-		// Position and size the window
-		this.move(0, 0);
-		this.set_default_size(displayWidth, -1);
-		
-		// Move to the bottom of the screen	
-		//set_gravity(Gdk.Gravity.SOUTH); 
-		//move(0, displayHeight);
-
 		// Misc setup
-        this.set_type_hint(Gdk.WindowTypeHint.DOCK);
+		this.set_default_size(displayWidth, -1);
         this.set_decorated(false);
         this.set_resizable(false);
-
-        // Quit if the panel is destroyed
-        this.destroy.connect(this_app.release);
+        override_focus(this);
 	}
 
 	private void populate_bar(Gtk.HeaderBar bar) {
 		// Start of the panel (adds left -> right)
 
 		// DE controls
-		bar.pack_start(new AppsMenu());
+		bar.pack_start(bar_items[0].create());
 		//bar.pack_start(new ExpoLauncher()); TODO
 		//bar.pack_start(new CurrentAppMenu()); TODO
 		bar.pack_start(new Gtk.Separator(Gtk.Orientation.VERTICAL));
@@ -74,5 +66,11 @@ class PanelWindow : Gtk.ApplicationWindow {
 
 		// Extra status icons
 		// TODO
+	}
+
+	public override bool focus_out_event(Gdk.EventFocus event) {
+		print("[Panel] Lost focus. Collapsing all popovers.\n");
+		foreach (Applet applet in bar_items) applet.collapse();
+		return false;
 	}
 }

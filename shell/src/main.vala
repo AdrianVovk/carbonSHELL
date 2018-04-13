@@ -7,12 +7,14 @@ class ShellApplication : Gtk.Application {
 		{ "version", 'v', 0, OptionArg.NONE, ref version, "Display version number", null },
 		{ "volup", 'u', 0, OptionArg.NONE, null, "Bump up the volume and show a popup", null },
 		{ "voldown", 'd', 0, OptionArg.NONE, null, "Bump down the volume and show a popup", null },
-		{ "volmute", 'd', 0, OptionArg.NONE, null, "Mute the volume and show a popup", null },
-		{ "noshell", 'd', 0, OptionArg.NONE, null, "Mute the volume and show a popup", null },
+		{ "volmute", 'm', 0, OptionArg.NONE, null, "Mute the volume and show a popup", null },
+		{ "wallpaper", 'w', 0, OptionArg.STRING, null, "Create a wallpaper window", null},
+		{ "no-protos", 0, 0, OptionArg.NONE, null, "Disable the dependency on Wayfire's protocols", null },
 		{ null }
 	};
 
-	private int open_windows_num = 0; // The number of open windows there are
+	private bool panel_open = false;
+	private bool wall_open = false;
 	
 	public ShellApplication() {
 		Object(
@@ -28,31 +30,48 @@ class ShellApplication : Gtk.Application {
 		bool volup = options.lookup_value("volup", VariantType.BOOLEAN).get_boolean();
 		bool voldown = options.lookup_value("voldown", VariantType.BOOLEAN).get_boolean();
 		bool volmute = options.lookup_value("volmute", VariantType.BOOLEAN).get_boolean();
-		bool noshell = options.lookup_value("noshell", VariantType.BOOLEAN).get_boolean();
+		bool no_protos = options.lookup_value("no-protos", VariantType.BOOLEAN).get_boolean();
+		string wallpaper = options.lookup_value("wallpaper", VariantType.STRING).get_string();
+
+		if (!no_protos) {
+			Gdk.Display disp = Gdk.Display.get_default();
+			setup_wayfire_connection(disp);
+		} else print("Skipping Wayfire connection\n");
 		
 		if (volup) { // Volume up requested
-			if (open_windows_num < 1) {
+			if (!panel_open) {
 				command_line.printerr("ERROR: There are no panels running");
 				return 1;
 			}
 			command_line.print("Volume Up");
 			return 0;
 		} else if (voldown) { // Volume down requested
-			if (open_windows_num < 1) {
+			if (!panel_open) {
 				command_line.printerr("ERROR: There are no panels running");
 				return 1;
 			}
 			command_line.print("Volume Down");
 			return 0;
 		} else if (volmute) { // Volume down requested
-			if (open_windows_num < 1) {
+			if (!panel_open) {
 				command_line.printerr("ERROR: There are no panels running");
 				return 1;
 			}
 			command_line.print("Volume Mute");
 			return 0;
+		} else if (wallpaper != null) {
+			if (wall_open) {
+				command_line.printerr("ERROR: A wallpaper is already running.");
+				return 1;
+			}
+			command_line.print("Opening wallpaper: " + wallpaper);
+			this.hold();
+			BackgroundWindow window = new BackgroundWindow(this, wallpaper);
+			window.show_all();
+			if (!no_protos) set_wallpaper(window);
+			return 0;
 		} else { // Open the panel by default
-			if (open_windows_num >= 1) {
+			if (panel_open) {
 				command_line.printerr("ERROR: A panel is already running.");
 				return 1;
 			}
@@ -60,24 +79,20 @@ class ShellApplication : Gtk.Application {
 			this.hold();
 			PanelWindow window = new PanelWindow(this);
 			window.show_all();
-			if (!noshell) setup_wayfire_shell(window); else print("Skipping Wayfire connection\n");
+			if (!no_protos) set_panel(window);
 			return 0;
 		}
 	}
 
-	protected void setup_wayfire_shell(PanelWindow panel) {
-		set_panel(panel);
-		
-		Gdk.Display disp = Gdk.Display.get_default();
-		setup_wayfire_connection(disp);
-	}
-
 	protected override void window_added(Gtk.Window win) {
-		open_windows_num++;
+		if (win is PanelWindow) panel_open = true;
+		else if (win is BackgroundWindow) wall_open = true;
 	}
 
 	protected override void window_removed(Gtk.Window win) {
-		open_windows_num--;
+		if (win is PanelWindow) panel_open = false;
+		else if (win is BackgroundWindow) wall_open = false;
+		if (!panel_open && !wall_open) this.release();
 	}
 	
 	// Process arguments locally

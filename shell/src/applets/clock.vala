@@ -25,6 +25,7 @@ class ClockApplet : Gtk.ToggleToolButton {
 
 	private bool update_time() {
 		this.set_label(new DateTime.now_local().format(time_fmt));
+		override_focus(this);
 		return Source.CONTINUE;
 	}
 

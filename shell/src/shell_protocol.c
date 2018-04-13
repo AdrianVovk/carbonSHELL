@@ -7,9 +7,11 @@
 #include <gdk/gdk.h>
 #include <gdk/gdkwayland.h>
 
-extern void wayfire_ready();
+extern void on_wayfire_ready();
 void setup_protocol (GdkDisplay* disp);
 void wayfire_set_panel (GdkWindow* window);
+void wayfire_set_background (GdkWindow* window);
+gboolean is_wayfire_ready ();
 
 // Impl of the protocol
 #include "wayfire-shell-client-protocol.h"
@@ -19,15 +21,17 @@ struct wayfire_shell* shell_instance;
 
 void registry_add_object(void* _, struct wl_registry *registry, uint32_t name, const char *interface, uint32_t __) {
 	if (strcmp(interface, wayfire_shell_interface.name) == 0) {
-		g_print("Connecting to Wayfire.\n");
 		shell_instance = (struct wayfire_shell*) wl_registry_bind(registry, name, &wayfire_shell_interface, 1u);
-		wayfire_ready();
+		on_wayfire_ready();
+		g_print("Connected to Wayfire.\n");
 	}
 }
 
 void registry_remove_object(void* _, struct wl_registry* __, uint32_t ___)
 {
 }
+
+
 
 static struct wl_registry_listener registry_listener =
 {
@@ -48,10 +52,21 @@ void setup_wayfire_connection (GdkDisplay* disp) {
 	wl_registry_destroy(registry);
 }
 
+gboolean is_wayfire_ready()
+{
+	return shell_instance != NULL;
+}
+
 void wayfire_set_panel(GdkWindow* window)
 {
 	struct wl_surface* surface = gdk_wayland_window_get_wl_surface(window);
-	wayfire_shell_add_panel(shell_instance, NULL, surface);
+	wayfire_shell_add_panel(shell_instance, 0, surface);
 	wayfire_shell_reserve(shell_instance, NULL, WAYFIRE_SHELL_PANEL_POSITION_UP, gdk_window_get_width(window), gdk_window_get_height(window));
 	wayfire_shell_configure_panel(shell_instance, NULL, surface, 0, 0);
+}
+
+void wayfire_set_background(GdkWindow* window)
+{
+	struct wl_surface* surface = gdk_wayland_window_get_wl_surface(window);
+	wayfire_shell_add_background(shell_instance, 0, surface, 0, 0);
 }
