@@ -1,5 +1,5 @@
 abstract class Applet {
-	private Gtk.Popover popup;
+	protected Gtk.Popover popup;
 
 	protected abstract Gtk.Widget create_panel_widget();
 
@@ -23,10 +23,21 @@ abstract class Applet {
 	}
 
 	public virtual void collapse() {
-		print(popup.has_grab().to_string() + "\n\n\n");
+		//print(popup.has_grab().to_string() + "\n\n\n");
 		//if (popup != null) popup.popdown();
 	}
 }
+
+class SeparatorApplet : Applet {
+	protected override Gtk.Widget create_panel_widget() {
+		return new Gtk.Separator(Gtk.Orientation.VERTICAL);
+	}
+
+	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
+		return null;
+	}
+}
+
 /*
 class AppletBox : Applet { //TODO
 	override Gtk.Widget create_panel_widget() {

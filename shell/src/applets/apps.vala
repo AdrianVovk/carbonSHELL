@@ -1,6 +1,6 @@
-using Gtk;
+	using Gtk;
 
-const bool APPS_GRID = false;
+const bool APPS_GRID = true;
 
 class AppsListApplet : Applet {
 	protected override Gtk.Widget create_panel_widget() {
