@@ -11,13 +11,14 @@ class PanelWindow : Gtk.ApplicationWindow {
 	Applet[] bar_end_items = { // Adds right -> left
 		new ClockApplet(),
 		new SeparatorApplet(),
-		new UserApplet(),
-		new BatteryApplet(),
+//		new UserApplet(), DISABLED
 		new NotificationApplet(),
+		new BatteryApplet(),
 		new NetworkApplet(),
 		new VolumeApplet(),
 		// new CaffineApplet(),
 		// new WeatherApplet(),
+		// new LanguageApplet(),
 		new SeparatorApplet()
 	};
 	

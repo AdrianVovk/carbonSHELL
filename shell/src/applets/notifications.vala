@@ -11,23 +11,60 @@ class NotificationApplet : Applet {
 		return button;
 	}
 
-	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
-		Gtk.Popover panel = new Gtk.Popover(attach_to);
-		panel.set_size_request(350, 600);
+	protected override void calculate_size (out int width, out int height) {
+		width = 350;
+		height = -1;
+	}
+		
+	protected override Gtk.Widget? populate_popup () {		
 
 		Gtk.Box layout = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
 
-		Gtk.Box header = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
-		layout.pack_start(header, false);
-		Gtk.Label header_name = new Gtk.Label("<span size=\"x-large\" weight=\"bold\">Notifications</span>");
-		header_name.use_markup = true;
-		header.pack_start(header_name, false, true, 4);
-		Gtk.Button clear_button = new Gtk.Button.with_label("Clear All");
-		header.pack_end(clear_button, false, true, 4);
+		layout.pack_start (create_notification ("firefox", "Firefox", "A test notification"));
+		layout.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+		layout.pack_start (create_notification ("discord", "Discord: #linux", "Dan: Hello world"));
+		layout.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+		layout.pack_start (create_notification ("skypeforlinux", "Skype", "Missed call from Grandpa"));
 		
-		panel.add(layout);
-		layout.show_all();
-		return panel;
+		Gtk.Button clear_all_button = new Gtk.Button.with_label ("Clear All");
+		layout.pack_end (clear_all_button);
+		layout.pack_end (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+		
+		return layout;
+	}
+
+	private Gtk.Widget create_notification (string icon_name, string app_name, string desc, string[]? actions = null) {
+		Gtk.Box root = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
+		Gtk.Image icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.INVALID);
+		icon.pixel_size = 24;
+		root.pack_start (icon, false);
+
+		Gtk.Box details = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+		root.pack_start (details, true, true, 12);
+
+		Gtk.Label name = new Gtk.Label (@"<big>$app_name</big>");
+		name.use_markup = true;
+		name.xalign = 0;
+		details.pack_start (name);
+
+		Gtk.Label app_message = new Gtk.Label (desc);
+		app_message.xalign = 0;
+		details.pack_start (app_message, false, false);
+		
+		Gtk.Button wrapper = new Gtk.Button ();
+		wrapper.get_style_context ().add_class ("flat");
+		wrapper.add (root);
+		wrapper.clicked.connect (it => show_notification_details (app_name, desc, icon_name, actions));
+		return wrapper;
+	}
+
+	private void show_notification_details (string title, string message, string icon_name, string[] actions = null) {
+		Gtk.Dialog dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.DESTROY_WITH_PARENT, Gtk.MessageType.OTHER, Gtk.ButtonsType.CLOSE, message);
+		dialog.title = title;
+		dialog.icon_name = icon_name;
+		dialog.window_position = Gtk.WindowPosition.CENTER;
+		dialog.show_all();
 	}
 }
 

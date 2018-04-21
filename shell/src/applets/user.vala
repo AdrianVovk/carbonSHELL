@@ -9,10 +9,13 @@ class UserApplet : Applet {
 		return button;
 	}
 
-	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
-		Gtk.Popover panel = new Gtk.Popover(attach_to);
-		panel.set_size_request(300, 600);
-		return panel;
+	protected override void calculate_size (out int width, out int height) {
+		width = 300;
+		height = 600;
+	}
+		
+	protected override Gtk.Widget? populate_popup () {		
+		return new Gtk.Label ("TODO");
 	}
 }
 

@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner  = "ammen99";
     repo   = "wayfire";
-    rev    = "b1514c96a3732e556c9e50aa9ad45231ec9e3ff3";
-    sha256 = "12vkacjcd3czfya00h6nlb4gihqdy4d94d6fvp4i9zwq7k72ix0r";
+    rev    = "wlroots-adrian";
+    sha256 = "19bi6jp60q07nwzxsgyfv8xmr209hkxhyirzy4qacl3sx6z64vak";
   };
 
 #  patchPhase = ''
@@ -27,7 +27,12 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkgconfig ];
   
   buildInputs = [
-    glm glib freetype cairo libevdev alsaLib alsaUtils (import ./weston.nix) (import ./wlroots.nix)
+    glm glib freetype cairo libevdev alsaLib alsaUtils (import ./wlroots.nix)
+    (import ./weston.nix)
+
+        wayland libGLU_combined libxkbcommon cairo xorg.libxcb xorg.libXcursor xlibsWrapper udev libdrm
+        mtdev libjpeg pam dbus libinput pango libunwind freerdp libva
+        libwebp wayland-protocols
   ];
 
 #  cmakeFlags = [

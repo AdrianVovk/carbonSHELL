@@ -1,5 +1,13 @@
 using Gtk;
 
+const string[] CLOCKS = {
+	"America/New_York",
+	"America/Los_Angeles",
+	"Europe/Berline",
+	"Europe/Moscow",
+	"Pacific/Fiji"
+};
+
 class ClockApplet : Applet {
 	Gtk.ToggleToolButton clock;
 	string time_fmt = "";
@@ -15,14 +23,39 @@ class ClockApplet : Applet {
 		return clock;
 	}
 
-	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
-		Gtk.Popover panel = new Gtk.Popover(attach_to);
-
-		Gtk.Calendar cal = new Gtk.Calendar();
-		panel.add(cal);
-		cal.show_all();
+	protected override void calculate_size (out int width, out int height) {
+		width = 300;
+		height = -1;
+	}
 		
-		return panel;
+	protected override Gtk.Widget? populate_popup () {
+		Gtk.Box layout = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+
+		bool first = true;
+		foreach (string zone in CLOCKS) {
+			if (!first) layout.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+			first = false;
+
+			layout.pack_start (create_world_clock (zone));
+		}
+
+		return layout;
+	}
+
+	private Gtk.Widget create_world_clock (string timezone) {
+		
+		DateTime now = new DateTime.now (new TimeZone (timezone));
+		string time = now.format (create_time_fmt (true));
+		string date = now.format ("%x");
+		string location = timezone.substring (timezone.last_index_of ("/") + 1).replace ("_", " ");
+
+		Gtk.Box time_layout = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+		Gtk.Label time_label = new Gtk.Label (@"<big>$time</big>");
+		time_label.use_markup = true;
+		time_layout.pack_start (time_label);
+		time_layout.pack_end (new Gtk.Label (location));
+		time_layout.margin = 8;
+		return time_layout;
 	}
 
 	private bool update_time() {
@@ -30,16 +63,17 @@ class ClockApplet : Applet {
 		clock.set_label(now.format(time_fmt));
 		clock.set_tooltip_text(now.format("%x"));
 		override_focus(clock);
+		update_popup ();
 		return Source.CONTINUE;
 	}
 
-	private string create_time_fmt() {
+	private string create_time_fmt(bool no_day = false) {
 		// TODO: Settings
 		bool militaryTime = true;
 		bool seconds = false;
 		
 		StringBuilder fmt = new StringBuilder();
-		fmt.append("%a ");
+		if (!no_day) fmt.append("%a ");
 		if (militaryTime) fmt.append("%H"); else fmt.append("%I");
 		fmt.append(":%M");
 		if (seconds) fmt.append(":%S");

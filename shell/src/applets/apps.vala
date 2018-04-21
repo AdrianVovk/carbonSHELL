@@ -12,13 +12,14 @@ class AppsListApplet : Applet {
 		return launcher;
 	}
 
-	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
-		Gtk.Popover panel = new Gtk.Popover(attach_to);
-		panel.set_size_request(APPS_GRID ? 700 : 400, 500);
+	protected override void calculate_size (out int width, out int height) {
+		width = APPS_GRID ? 700 : 400;
+		height = 500;
+	}
 
+	protected override Gtk.Widget? populate_popup () {
 		// The root contents of the popup
 		Gtk.Box panel_layout = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-		panel.add(panel_layout);
 
 		// The scrolling contents of the popup
 		Gtk.ScrolledWindow apps_scroller = new Gtk.ScrolledWindow(null, null);
@@ -42,7 +43,7 @@ class AppsListApplet : Applet {
 		search_box.activate.connect(() => {
 			// TODO: Run the first item
 		});
-		panel.closed.connect(() => search_box.set_text(""));
+		this.popup.closed.connect(() => search_box.set_text(""));
 
 		// Filter functionality
 		apps_container.set_filter_func(elem => {
@@ -68,7 +69,7 @@ class AppsListApplet : Applet {
 			launcher.add(app_info);
 			launcher.clicked.connect(() => {
 				launch(app);
-				panel.popdown();
+				this.popup.popdown();
 			});
 
 			// Setup details tooltip
@@ -85,7 +86,6 @@ class AppsListApplet : Applet {
 
 		panel_layout.pack_start(search_box, false);
 		panel_layout.pack_start(apps_scroller, true);
-		panel_layout.show_all();
-		return panel;
+		return panel_layout;
 	}
 }

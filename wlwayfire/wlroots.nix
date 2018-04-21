@@ -1,15 +1,15 @@
 with import <nixpkgs> {};
 
 let pname = "wlroots";
-    version = "unstable-2018-04-08";
+    version = "unstable-2018-04-21";
 in stdenv.mkDerivation rec {
   name = "${pname}-${version}";
 
   src = fetchFromGitHub {
     owner = "swaywm";
     repo = "wlroots";
-    rev = "5f48c7fddd6a28b529eb02ca156db577b76edfb6";
-    sha256 = "0jldmp5zgndyiz9bqxxck60910gb1i42pgfzvaxh97rgj4jhhkz8";
+    rev = "0c7968d0936603460c9e07ce0cd6c9188b77a39c";
+    sha256 = "07fjf93bclg99zqj1qln524kss9kd01fx5wqi7jkh03rf2simcs7";
   };
 
   # $out for the library and $bin for rootston

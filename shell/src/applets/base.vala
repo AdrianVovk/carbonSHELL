@@ -1,30 +1,63 @@
 abstract class Applet {
-	protected Gtk.Popover popup;
+	protected Gtk.Widget panel_widget;
+	protected Gtk.Popover popup = null;
 
 	protected abstract Gtk.Widget create_panel_widget();
 
-	protected abstract Gtk.Popover? create_popup(Gtk.Widget attach_to);
+	protected abstract Gtk.Widget? populate_popup ();
+
+	protected abstract void calculate_size (out int width, out int height);
 
 	public virtual Gtk.Widget create() {
-		Gtk.Widget widget = create_panel_widget();
-		popup = create_popup(widget);
-		if (popup != null) {
-			popup.constrain_to = Gtk.PopoverConstraint.NONE;
-			popup.position = Gtk.PositionType.BOTTOM;
-		}
-		if (widget is Gtk.ToggleToolButton) {
-			Gtk.ToggleToolButton button = widget as Gtk.ToggleToolButton;
-			button.toggled.connect(() => {
-				if (button.active) popup.popup();
+	    panel_widget = create_panel_widget();
+
+ 		setup_popup (panel_widget);
+	    
+		if (panel_widget is Gtk.ToggleToolButton && this.popup != null) {
+			Gtk.ToggleToolButton button = panel_widget as Gtk.ToggleToolButton;
+			button.toggled.connect (() => {
+				if (button.active) popup.popup ();
 			});
-			popup.closed.connect(() => button.set_active(false));
+			popup.closed.connect (() => button.set_active (false));
 		}
-		return widget;
+		return panel_widget;
 	}
 
+	protected virtual void setup_popup (Gtk.Widget attach_to) {
+		Gtk.Widget popup_contents = populate_popup ();
+		if (popup_contents == null) return;
+		
+		Gtk.Popover popover = new Gtk.Popover (attach_to);
+
+		int width;
+		int height;
+		calculate_size (out width, out height);
+		popover.set_size_request(width, height);
+
+		popover.constrain_to = Gtk.PopoverConstraint.NONE;
+		popover.position = Gtk.PositionType.BOTTOM;
+
+		popup_contents.show_all ();
+		popover.add (popup_contents);
+
+		this.popup = popover;
+	}
+
+	public virtual void update_popup () {
+		if (popup == null) return;
+		Gtk.Widget popup_contents = populate_popup ();
+	    if (popup_contents != null) {
+			Gtk.Widget old_contents = popup.get_child ();
+			popup.remove (old_contents);
+			old_contents.destroy ();
+	    	
+			popup_contents.show_all ();
+	  		popup.add (popup_contents);
+	    }
+	}
+	
 	public virtual void collapse() {
-		//print(popup.has_grab().to_string() + "\n\n\n");
-		//if (popup != null) popup.popdown();
+		if (popup != null) popup.popdown();
 	}
 }
 
@@ -33,7 +66,12 @@ class SeparatorApplet : Applet {
 		return new Gtk.Separator(Gtk.Orientation.VERTICAL);
 	}
 
-	protected override Gtk.Popover? create_popup(Gtk.Widget attach_to) {
+	protected override void calculate_size (out int width, out int height) {
+		width = 0;
+		height = 0;
+	}
+
+	protected override Gtk.Widget? populate_popup () {
 		return null;
 	}
 }
