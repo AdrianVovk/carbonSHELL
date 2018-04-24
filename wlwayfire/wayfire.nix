@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner  = "ammen99";
     repo   = "wayfire";
-    rev    = "wlroots-adrian";
-    sha256 = "19bi6jp60q07nwzxsgyfv8xmr209hkxhyirzy4qacl3sx6z64vak";
+    rev    = "2604c88eb87adaa5736d9b8f1acb1b3a983f234b";
+    sha256 = "0203wpmj8wh52yqk17xpq4w4ijn6sksgzs25gbwpxbpyp6fgvwxl";
   };
 
 #  patchPhase = ''
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   
   buildInputs = [
     glm glib freetype cairo libevdev alsaLib alsaUtils (import ./wlroots.nix)
-    (import ./weston.nix)
+    #(import ./weston.nix)
 
         wayland libGLU_combined libxkbcommon cairo xorg.libxcb xorg.libXcursor xlibsWrapper udev libdrm
         mtdev libjpeg pam dbus libinput pango libunwind freerdp libva
