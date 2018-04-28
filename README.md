@@ -1,34 +1,55 @@
-# WIP README
----
-
 # Substance OS Desktop
+
+**This README is unfinished and probably out of date. Also please note that there is no license on the project currently. Please contact me to make sure I'm okay with your use of this project until I add a license.**
+
 Maintainer: [Adrian Vovk](https://github.com/AdrianVovk)
 
-The Substance OS Desktop (we'll call it the shell from here on out) is the main graphical interface of [Substance OS](http://substanceproject.net
+The Substance OS Desktop (we'll call it the shell from here on out) is the main graphical interface of [Substance OS](http://substanceproject.net)
 
 ## Building and running
-The Substance OS 
 
-The shell runs on top of a Wayland compositor called [Wayfire](https://github.com/ammen99/wayfire), and that needs to be built first.
+The shell is designed primarily to run on NixOS, and is therefore built with the [Nix package manager](https://nixos.org/nix). This is the only build dependency, since Nix handles everything else internally.
+
+The shell runs on top of a Wayland compositor called [Wayfire](https://github.com/ammen99/wayfire), and that needs to be built first. The current version of Wayfire is stored in `wlwayfire/`, though a (possibly, depending on your system) more stable and fully-featured version is in `wayfire/`. The former is a work in progress port to [wlroots](https://github.com/swaywm/wlroots), while the latter is based on libweston.
 
 ```
 $ cd wlwayfire
 $ nix build -f wayfire.nix
 ```
 
-Once that is built, build the shell.
+Once the compositor is built, you can build the shell.
 
 ```
 [...]
 $ cd ../shell
 $ nix build -f shell.nix
 ```
+Once built, you can start the environment. There are a few ways to achieve this.
 
-Then, you can run the shell and the compositor
-
+First, you can edit `wlwayfire/wayfire.ini` and change the hardcoded paths used for launching the shell. The paths you need to change all start with `/home/adrian/Development/desktop`. Change this prefix to match the location of this cloned repo. Then run:
 ```
 [...]
-$ cd ..
 $ wlwayfire/result/bin/wayfire --config wlwayfire/wayfire.ini
-$ 
 ```
+
+Otherwise, you can use two different terminals and run this:
+```
+$ wlwayfire/result/bin/wayfire --config wlwayfire/wayfire.ini
+<SWITCH TO A NEW TERMINAL>
+$ cd <cloned repo>/shell
+$ result/bin/shell && result/bin/shell --wallpaper ../wallpapers/spacex.jpg
+<SWITCH BACK TO FIRST TERMINAL>
+```
+
+To use Xwayland, either find it in `/nix/store` and add it to `PATH`, or install it using your distro's package manager.
+
+##### Future build process
+This is what building and running will look like in the near future:
+```
+$ cd session/
+$ nix build
+$ result/bin/substos-session --config [...]
+```
+**THIS DOES NOT WORK YET!!**
+
+Also, a non-nix build process will be created to allow for packaging this for other distros.
