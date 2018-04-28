@@ -10,11 +10,11 @@ The Substance OS Desktop (we'll call it the shell from here on out) is the main 
 
 The shell is designed primarily to run on NixOS, and is therefore built with the [Nix package manager](https://nixos.org/nix). This is the only build dependency, since Nix handles everything else internally.
 
-The shell runs on top of a Wayland compositor called [Wayfire](https://github.com/ammen99/wayfire), and that needs to be built first. The current version of Wayfire is stored in `wlwayfire/`, though a (possibly, depending on your system) more stable and fully-featured version is in `wayfire/`. The former is a work in progress port to [wlroots](https://github.com/swaywm/wlroots), while the latter is based on libweston.
+The shell runs on top of a Wayland compositor called [Wayfire](https://github.com/ammen99/wayfire), and that needs to be built first.
 
 ```
-$ cd wlwayfire
-$ nix build -f wayfire.nix
+$ cd wayfire
+$ nix build
 ```
 
 Once the compositor is built, you can build the shell.
@@ -22,19 +22,19 @@ Once the compositor is built, you can build the shell.
 ```
 [...]
 $ cd ../shell
-$ nix build -f shell.nix
+$ nix build
 ```
 Once built, you can start the environment. There are a few ways to achieve this.
 
-First, you can edit `wlwayfire/wayfire.ini` and change the hardcoded paths used for launching the shell. The paths you need to change all start with `/home/adrian/Development/desktop`. Change this prefix to match the location of this cloned repo. Then run:
+First, you can edit `wayfire/config.ini` and change the hardcoded paths used for launching the shell. The paths you need to change all start with `/home/adrian/Development/desktop`. Change this prefix to match the location of this cloned repo. Then run:
 ```
 [...]
-$ wlwayfire/result/bin/wayfire --config wlwayfire/wayfire.ini
+$ wayfire/result/bin/wayfire --config wayfire/config.ini
 ```
 
 Otherwise, you can use two different terminals and run this:
 ```
-$ wlwayfire/result/bin/wayfire --config wlwayfire/wayfire.ini
+$ wayfire/result/bin/wayfire --config wayfire/config.ini
 <SWITCH TO A NEW TERMINAL>
 $ cd <cloned repo>/shell
 $ result/bin/shell && result/bin/shell --wallpaper ../wallpapers/spacex.jpg
@@ -50,6 +50,6 @@ $ cd session/
 $ nix build
 $ result/bin/substos-session --config [...]
 ```
-**THIS DOES NOT WORK YET!!**
+**NOTE THAT THIS DOES NOT WORK YET!!**
 
 Also, a non-nix build process will be created to allow for packaging this for other distros.
