@@ -1,36 +1,43 @@
 using Gtk;
 
-public int main(string[] args) {
-	//print("Starting SubstOS Decorator Service...\n");
+Gee.HashMap<uint32, Gtk.Window> view_to_decor;
+
+public int main (string[] args) {
+	message ("Hello");
 
 	// Set a variable that the protocol will need in a little bit
-	view_to_decor = new Gee.HashMap<uint32, Gtk.Widget>();
+	view_to_decor = new Gee.HashMap<uint32, Gtk.Window> ();
 	
-	Gtk.Application app = new Gtk.Application("subsos.shell.Decorator", ApplicationFlags.FLAGS_NONE);
-	app.startup.connect((activated_app) => {
-		Gdk.Display disp = Gdk.Display.get_default();
-		setup_protocol(disp);
-		
-		activated_app.hold();
+	Gtk.Application app = new Gtk.Application ("substos.shell.Decorator", ApplicationFlags.FLAGS_NONE);
+	app.startup.connect (activated_app => {
+		setup_protocol (Gdk.Display.get_default());		
+		activated_app.hold (); // Don't quit the program
 	});
-	app.activate.connect((activated_app) => {
+	app.activate.connect (activated_app => {
 		print("Service is running.\n");
 	});
-	return app.run(args);
+	return app.run (args);
 }
 
-// External API
+public Gtk.Widget create_deco_window (uint32 view) {
+	print (@"Creating decoration for $view");
 
-public Gtk.Widget create_deco_window(string title) {
-	Gtk.Window window = new Gtk.Window();
-	window.set_default_size(300, 300);
-	window.set_title(title);
-	window.show_all();
-	return window;
+	Gtk.Window decor = new Gtk.Window ();
+	decor.set_default_size (300, 300);
+
+	// Connect the decoration to the view
+	decor.set_title (@"__wf_decorator:$view");
+	view_to_decor.@set (view, decor);
+
+	decor.show_all ();
+	return decor;
 }
 
-public void set_title(Gtk.Widget window, string title) {
-	(window as Gtk.Window).set_title(title);
+public void set_title (uint32 view, string title) {
+	print (@"Changing title of $view to \"$title\"");
+	
+	Gtk.Window win = view_to_decor.@get (view);
+	win.title = title;
 }
 
-extern void setup_protocol(Gdk.Display disp);
+extern void setup_protocol (Gdk.Display disp);
