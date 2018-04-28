@@ -8,8 +8,8 @@ in stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "swaywm";
     repo = "wlroots";
-    rev = "0c7968d0936603460c9e07ce0cd6c9188b77a39c";
-    sha256 = "07fjf93bclg99zqj1qln524kss9kd01fx5wqi7jkh03rf2simcs7";
+    rev = "c40f86d27f611a2b34cead63e63c12d6a18263eb";
+    sha256 = "0yak9jlc66klzk17kgfyglxfmf7pd7a2cbygj2m78cj5qzrsaial";
   };
 
   # $out for the library and $bin for rootston
@@ -20,6 +20,7 @@ in stdenv.mkDerivation rec {
   buildInputs = [
     wayland libGL wayland-protocols libinput libxkbcommon pixman
     xorg.xcbutilwm xorg.libX11 libcap xorg.xcbutilimage xorg.xcbutilerrors
+    xwayland
   ];
 
   # Install rootston (the reference compositor) to $bin

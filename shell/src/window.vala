@@ -21,7 +21,8 @@ class PanelWindow : Gtk.ApplicationWindow {
 		// new LanguageApplet(),
 		new SeparatorApplet()
 	};
-	
+
+	Gtk.HeaderBar tempBar = null;
 	public PanelWindow(ShellApplication this_app) {
 		Object(application: this_app);
 		
@@ -31,6 +32,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 	
 		// Create the bar
 		Gtk.HeaderBar bar = new Gtk.HeaderBar();
+		this.tempBar = null;
 		this.add(bar);
 
 		// Add static content to the panel
@@ -47,6 +49,11 @@ class PanelWindow : Gtk.ApplicationWindow {
         this.set_decorated(false);
         this.set_resizable(false);
         override_focus(this);
+	}
+
+	public void open_menu () {
+		this.grab_focus ();
+		bar_start_items[0].toggle_popup ();
 	}
 
 	public override bool focus_out_event(Gdk.EventFocus event) {

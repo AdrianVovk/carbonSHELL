@@ -1,6 +1,7 @@
 abstract class Applet {
 	protected Gtk.Widget panel_widget;
 	protected Gtk.Popover popup = null;
+	protected bool popup_open = false;
 
 	protected abstract Gtk.Widget create_panel_widget();
 
@@ -16,11 +17,28 @@ abstract class Applet {
 		if (panel_widget is Gtk.ToggleToolButton && this.popup != null) {
 			Gtk.ToggleToolButton button = panel_widget as Gtk.ToggleToolButton;
 			button.toggled.connect (() => {
-				if (button.active) popup.popup ();
+				if (button.active) open_popup ();
 			});
-			popup.closed.connect (() => button.set_active (false));
+			popup.closed.connect (() => {
+				button.set_active (false);
+				popup_open = false;
+			});
 		}
 		return panel_widget;
+	}
+
+	public virtual void open_popup () {
+		if (popup != null) popup.popup ();
+		popup_open = true;
+	}
+
+	public virtual void close_popup () {
+		if (popup != null) popup.popdown ();
+		popup_open = false;
+	}
+
+	public virtual void toggle_popup () {
+		if (popup_open) close_popup (); else open_popup ();
 	}
 
 	protected virtual void setup_popup (Gtk.Widget attach_to) {

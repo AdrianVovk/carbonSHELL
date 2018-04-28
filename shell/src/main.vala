@@ -10,10 +10,12 @@ class ShellApplication : Gtk.Application {
 		{ "volmute", 'm', 0, OptionArg.NONE, null, "Mute the volume and show a popup", null },
 		{ "wallpaper", 'w', 0, OptionArg.STRING, null, "Create a wallpaper window", null},
 		{ "no-protos", 0, 0, OptionArg.NONE, null, "Disable the dependency on Wayfire's protocols", null },
+		{ "show-apps", 0, 0, OptionArg.NONE, null, "Opens up the apps list", null },
 		{ null }
 	};
 
 	private bool panel_open = false;
+	private PanelWindow panel_window = null;
 	private bool wall_open = false;
 	
 	public ShellApplication() {
@@ -31,6 +33,7 @@ class ShellApplication : Gtk.Application {
 		bool voldown = options.lookup_value("voldown", VariantType.BOOLEAN).get_boolean();
 		bool volmute = options.lookup_value("volmute", VariantType.BOOLEAN).get_boolean();
 		bool no_protos = options.lookup_value("no-protos", VariantType.BOOLEAN).get_boolean();
+		bool show_windows = options.lookup_value("show-apps", VariantType.BOOLEAN).get_boolean();
 		string wallpaper = options.lookup_value("wallpaper", VariantType.STRING).get_string();
 
 		if (!no_protos) {
@@ -70,6 +73,9 @@ class ShellApplication : Gtk.Application {
 			window.show_all();
 			if (!no_protos) set_wallpaper(window);
 			return 0;
+		} else if (panel_open && show_windows) {
+			panel_window.open_menu ();
+			return 0;
 		} else { // Open the panel by default
 			if (panel_open) {
 				command_line.printerr("ERROR: A panel is already running.");
@@ -85,12 +91,18 @@ class ShellApplication : Gtk.Application {
 	}
 
 	protected override void window_added(Gtk.Window win) {
-		if (win is PanelWindow) panel_open = true;
+		if (win is PanelWindow) {
+			panel_open = true;
+			panel_window = win as PanelWindow;
+		}
 		else if (win is BackgroundWindow) wall_open = true;
 	}
 
 	protected override void window_removed(Gtk.Window win) {
-		if (win is PanelWindow) panel_open = false;
+		if (win is PanelWindow) {
+			panel_open = false;
+			panel_window = null;
+		}
 		else if (win is BackgroundWindow) wall_open = false;
 		if (!panel_open && !wall_open) this.release();
 	}
