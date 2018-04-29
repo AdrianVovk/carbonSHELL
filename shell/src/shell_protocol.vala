@@ -20,7 +20,12 @@ void on_wayfire_ready() {
 	if (wall_window != null) set_wallpaper(wall_window);
 }
 
+void steal_focus () {
+	if (is_wayfire_ready ()) wayfire_focus_panel ();
+}
+
 extern void setup_wayfire_connection(Gdk.Display disp);
 extern void wayfire_set_panel(Gdk.Window window);
 extern void wayfire_set_background(Gdk.Window window);
+extern void wayfire_focus_panel();
 extern bool is_wayfire_ready();

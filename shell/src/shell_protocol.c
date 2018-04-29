@@ -17,26 +17,54 @@ gboolean is_wayfire_ready ();
 #include "wayfire-shell-client-protocol.h"
 #include <wayland-client.h>
 
-struct wayfire_shell* shell_instance;
+static void output_created(void *data, struct wayfire_shell *shell, uint32_t output, uint32_t width, uint32_t height)
+{
+	g_print("Output Created\n");
+}
 
+static void output_resized(void *data, struct wayfire_shell *shell, uint32_t output, uint32_t width, uint32_t height)
+{
+	g_print("Output Resized\n");
+}
+
+static void output_destroyed(void *data, struct wayfire_shell *shell, uint32_t output)
+{
+	g_print("Output Destroyed\n");
+}
+
+static void output_autohide_panels(void *data, struct wayfire_shell *shell, uint32_t output, uint32_t autohide)
+{
+	g_print("Autohide Panels\n");
+}
+
+static void gamma_size(void *data, struct wayfire_shell *shell, uint32_t output, uint32_t size)
+{
+	g_print("Gamma Size\n");
+}
+
+const struct wayfire_shell_listener shell_listener =
+{
+	output_created,
+	output_resized,
+	output_destroyed,
+	output_autohide_panels,
+	gamma_size
+};
+
+struct wayfire_shell* shell_instance;
 void registry_add_object(void* _, struct wl_registry *registry, uint32_t name, const char *interface, uint32_t __) {
 	if (strcmp(interface, wayfire_shell_interface.name) == 0) {
 		shell_instance = (struct wayfire_shell*) wl_registry_bind(registry, name, &wayfire_shell_interface, 1u);
+		wayfire_shell_add_listener(shell_instance, &shell_listener, NULL);
 		on_wayfire_ready();
-		g_print("Connected to Wayfire.\n");
+		g_print("[Shell] Connected to Wayfire\n");
 	}
 }
-
-void registry_remove_object(void* _, struct wl_registry* __, uint32_t ___)
-{
-}
-
-
 
 static struct wl_registry_listener registry_listener =
 {
     &registry_add_object,
-    &registry_remove_object
+    NULL
 };
 
 void setup_wayfire_connection (GdkDisplay* disp) {
@@ -57,9 +85,11 @@ gboolean is_wayfire_ready()
 	return shell_instance != NULL;
 }
 
+struct wl_surface* panel_surface;
 void wayfire_set_panel(GdkWindow* window)
 {
 	struct wl_surface* surface = gdk_wayland_window_get_wl_surface(window);
+	panel_surface = surface;
 	wayfire_shell_add_panel(shell_instance, 0, surface);
 	wayfire_shell_reserve(shell_instance, NULL, WAYFIRE_SHELL_PANEL_POSITION_UP, gdk_window_get_width(window), gdk_window_get_height(window));
 	wayfire_shell_configure_panel(shell_instance, NULL, surface, 0, 0);
@@ -69,4 +99,9 @@ void wayfire_set_background(GdkWindow* window)
 {
 	struct wl_surface* surface = gdk_wayland_window_get_wl_surface(window);
 	wayfire_shell_add_background(shell_instance, 0, surface, 0, 0);
+}
+
+void wayfire_focus_panel()
+{
+	wayfire_shell_focus_panel(shell_instance, 0, panel_surface);
 }

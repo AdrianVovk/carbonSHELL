@@ -52,7 +52,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 	}
 
 	public void open_menu () {
-		this.grab_focus ();
+		steal_focus ();
 		bar_start_items[0].toggle_popup ();
 	}
 

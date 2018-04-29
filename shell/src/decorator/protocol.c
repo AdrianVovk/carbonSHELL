@@ -36,7 +36,7 @@ void registry_add_object(void* _, struct wl_registry *registry, uint32_t name, c
 	if (strcmp(interface, wf_decorator_manager_interface.name) == 0) 
 	{
 		struct wf_decorator_manager* manager = (struct wf_decorator_manager*) wl_registry_bind(registry, name, &wf_decorator_manager_interface, 1u);
-		g_print("[Decorator] Connected to Wayfire");
+		g_print("[Decorator] Connected to Wayfire\n");
 		wf_decorator_manager_add_listener(manager, &decorator_listener, NULL);
 	}
 }
