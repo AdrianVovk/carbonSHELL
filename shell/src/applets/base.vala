@@ -42,10 +42,12 @@ abstract class Applet {
 	}
 
 	protected virtual void setup_popup (Gtk.Widget attach_to) {
+		Gtk.Popover popover = new Gtk.Popover (attach_to);
+		this.popup = popover;
+		
 		Gtk.Widget popup_contents = populate_popup ();
 		if (popup_contents == null) return;
 		
-		Gtk.Popover popover = new Gtk.Popover (attach_to);
 
 		int width;
 		int height;
@@ -57,8 +59,6 @@ abstract class Applet {
 
 		popup_contents.show_all ();
 		popover.add (popup_contents);
-
-		this.popup = popover;
 	}
 
 	public virtual void update_popup () {

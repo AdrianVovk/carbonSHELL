@@ -20,7 +20,7 @@ class ShellApplication : Gtk.Application {
 	
 	public ShellApplication() {
 		Object(
-			application_id: "substos.Shell",
+			application_id: "carbon.Shell",
 			flags: ApplicationFlags.HANDLES_COMMAND_LINE
 		);
 		this.add_main_option_entries(options);
@@ -38,7 +38,7 @@ class ShellApplication : Gtk.Application {
 
 		if (!no_protos) {
 			Gdk.Display disp = Gdk.Display.get_default();
-			setup_wayfire_connection(disp);
+			connect_to_wayfire(disp);
 		} else print("Skipping Wayfire connection\n");
 		
 		if (volup) { // Volume up requested

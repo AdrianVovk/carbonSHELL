@@ -5,7 +5,6 @@
         </event>
 
         <request name="update_borders">
-            <arg name="decoration" type="object" interface="wl_surface"/>
             <arg name="top"    type="uint"/>
             <arg name="bottom" type="uint"/>
             <arg name="left"   type="uint"/>

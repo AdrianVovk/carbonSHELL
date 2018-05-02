@@ -7,13 +7,13 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner  = "ammen99";
     repo   = "wayfire";
-    rev    = "30c3481aefb6273b11f342de279b428cf2d0158e";
-    sha256 = "1zbj7gfh9f531xd7vhhxa3p3h8xjd4a5fx0i4fifsj4hqnm36zyr";
+    rev    = "b17fce10671f16f61b058e77d77a1effb8f235a8";
+    sha256 = "0d5lpknlpasjjd144jw6wl7lf363jqhvpwajcvc05lzmpldzqr6l";
   };
 
   prePatch = ''
-  	cp ${import ../shell}/wayland-protocols/*.xml proto/
-  	substituteInPlace proto/meson.build --replace "/home/ilex/work/wf-basic-deco/proto/wf-decorator.xml" "wf-decorator.xml"
+  	#cp ${import ../shell}/wayland-protocols/*.xml proto/
+  	#substituteInPlace proto/meson.build --replace "/home/ilex/work/wf-basic-deco/proto/wf-decorator.xml" "wf-decorator.xml"
 
   	# HACK: Make decoration only work with xwayland.
   	substituteInPlace plugins/decor/decoration.cpp --replace "if (decorator_resource && !decorator.is_decoration_window(view->get_title()))" "if (decorator_resource && !decorator.is_decoration_window(view->get_title()) && wlr_surface_is_xwayland_surface(view->surface))"
@@ -32,7 +32,7 @@ stdenv.mkDerivation rec {
   
   nativeBuildInputs = [ meson ninja pkgconfig ];
 
-  # mesonFlags = [ "--buildtype=debug" ];
+  mesonFlags = [ "--buildtype=debug" ];
   
   buildInputs = [
     glm glib freetype cairo libevdev alsaLib alsaUtils (import ./wlroots.nix)

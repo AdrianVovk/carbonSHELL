@@ -43,7 +43,10 @@ class AppsListApplet : Applet {
 		search_box.activate.connect(() => {
 			// TODO: Run the first item
 		});
-		this.popup.closed.connect(() => search_box.set_text(""));
+		this.popup.closed.connect(() => {
+			search_box.set_text ("");
+			return_focus ();
+		});
 
 		// Filter functionality
 		apps_container.set_filter_func(elem => {

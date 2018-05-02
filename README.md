@@ -1,10 +1,10 @@
-# Substance OS Desktop
+# carbonSHELL
 
 **This README is unfinished and probably out of date. Also please note that there is no license on the project currently. Please contact me to make sure I'm okay with your use of this project until I add a license.**
 
 Maintainer: [Adrian Vovk](https://github.com/AdrianVovk)
 
-The Substance OS Desktop (we'll call it the shell from here on out) is the main graphical interface of [Substance OS](http://substanceproject.net)
+carbonSHELL (or cSH) is the main graphical interface of [carbonOS](http://carbon.sh)
 
 ## Building and running
 
@@ -48,7 +48,7 @@ This is what building and running will look like in the near future:
 ```
 $ cd session/
 $ nix build
-$ result/bin/substos-session --config [...]
+$ result/bin/carbonos-session --config [...]
 ```
 **NOTE THAT THIS DOES NOT WORK YET!!**
 

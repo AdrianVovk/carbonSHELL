@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation rec {
-  name = "substos-shell-${version}";
+  name = "carbon-shell-${version}";
   version = "0.0.0";
 
   src = ./src;

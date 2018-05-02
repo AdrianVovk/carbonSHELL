@@ -8,7 +8,7 @@ public int main (string[] args) {
 	// Set a variable that the protocol will need in a little bit
 	view_to_decor = new Gee.HashMap<uint32, Gtk.Window> ();
 	
-	Gtk.Application app = new Gtk.Application ("substos.shell.Decorator", ApplicationFlags.FLAGS_NONE);
+	Gtk.Application app = new Gtk.Application ("carbon.shell.Decorator", ApplicationFlags.FLAGS_NONE);
 	app.startup.connect (activated_app => {
 		setup_protocol (Gdk.Display.get_default());		
 		activated_app.hold (); // Don't quit the program
