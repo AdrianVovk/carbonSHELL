@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner  = "ammen99";
     repo   = "wayfire";
-    rev    = "b17fce10671f16f61b058e77d77a1effb8f235a8";
-    sha256 = "0d5lpknlpasjjd144jw6wl7lf363jqhvpwajcvc05lzmpldzqr6l";
+    rev    = "4723a9dcf8997e96ef2a13c2e455c95024744255";
+    sha256 = "17fgzlk0hwaw9j8jv7hirl76mh4ldqxkazdwc5gmdhx4sjzzlbcl";
   };
 
   prePatch = ''

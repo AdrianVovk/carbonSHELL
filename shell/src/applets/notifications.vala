@@ -28,6 +28,13 @@ class NotificationApplet : Applet {
 		
 		Gtk.Button clear_all_button = new Gtk.Button.with_label ("Clear All");
 		layout.pack_end (clear_all_button);
+
+		Gtk.Box dnd_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+		layout.pack_end (dnd_box, true, true, 4);
+		dnd_box.pack_start (new Gtk.Label ("Do Not Disturb"), false, true, 8);
+		Gtk.Switch dnd_switch = new Gtk.Switch ();
+		dnd_box.pack_end (dnd_switch, false, true, 8);
+
 		layout.pack_end (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 		
 		return layout;

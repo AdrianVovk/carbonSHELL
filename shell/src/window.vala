@@ -17,7 +17,8 @@ class PanelWindow : Gtk.ApplicationWindow {
 		new NetworkApplet(),
 		new VolumeApplet(),
 		// new CaffineApplet(),
-		// new WeatherApplet(),
+		new DisplayApplet(),
+		new WeatherApplet(),
 		// new LanguageApplet(),
 		new SeparatorApplet()
 	};
@@ -48,6 +49,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 		this.set_default_size(displayWidth, -1);
         this.set_decorated(false);
         this.set_resizable(false);
+        this.accept_focus = true;
         override_focus(this);
 	}
 
@@ -56,10 +58,21 @@ class PanelWindow : Gtk.ApplicationWindow {
 		bar_start_items[0].toggle_popup ();
 	}
 
+//	public override bool button_press_event (Gdk.EventButton evt) {
+//		this.focus_visible = false;
+//		this.set_focus_child (null);
+//		return true;
+//	}
+
 	public override bool focus_out_event(Gdk.EventFocus event) {
 		print("[Panel] Lost focus. Collapsing all popovers.\n");
 		foreach (Applet applet in bar_start_items) applet.collapse();
 		foreach (Applet applet in bar_end_items) applet.collapse();
+
+		// Reset focus
+		this.focus_visible = false;
+		this.set_focus_child (null);
+		
 		return false;
 	}
 }
