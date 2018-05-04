@@ -45,8 +45,6 @@ This is what building and running will look like in the near future:
 ```
 $ cd session/
 $ nix build
-$ result/bin/carbonos-session --config [...]
+$ result/bin/carbon-session
 ```
-**NOTE THAT THIS DOES NOT WORK YET!!**
-
-Also, a non-nix build process will be created to allow for packaging this for other distros.
+I will also be moving the entire project to Meson, allowing builds from outside Nix.
