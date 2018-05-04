@@ -1,7 +1,4 @@
 # carbonSHELL
-
-**This README is unfinished and probably out of date. Also please note that there is no license on the project currently. Please contact me to make sure I'm okay with your use of this project until I add a license.**
-
 Maintainer: [Adrian Vovk](https://github.com/AdrianVovk)
 
 carbonSHELL (or cSH) is the main graphical interface of [carbonOS](http://carbon.sh)
