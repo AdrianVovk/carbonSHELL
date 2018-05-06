@@ -1,7 +1,5 @@
 [DBus (name = "org.freedesktop.Notifications")]
 public class Notify.Server : Object {
-	private uint32 curr_id = 1;
-
 	private static Notify.Server? instance = null;
 	public static Notify.Server obtain () {
 		if (instance == null) {
@@ -48,6 +46,18 @@ public class Notify.Server : Object {
 		this.get_notification (id).destroy ();
 	}
 
+	private uint32 curr_id = 1;
+	private uint32 generate_new_id () {
+		for (int id = curr_id; id < int.MAX; id++) {
+			if (get_notification (id) == null) {
+				curr_id = id;
+				return id;
+			}
+		}
+		error ("ID Generation error");
+		return -2;
+	}
+
 	// PROTOCOL
 
 	public string[] get_capabilities () {
@@ -71,7 +81,7 @@ public class Notify.Server : Object {
 		// Create a notification object
 		Notify.Notification n = new Notification ();
 		n.app_name = app_name;
-		n.id = replaces_id == 0 ? curr_id : replaces_id;
+		n.id = replaces_id == 0 ? generate_new_id () : replaces_id;
 		n.icon = app_icon;
 		n.title = summary;
 		n.body = body;
