@@ -1,7 +1,4 @@
 # carbonSHELL
-
-**This README is unfinished and probably out of date. Also please note that there is no license on the project currently. Please contact me to make sure I'm okay with your use of this project until I add a license.**
-
 Maintainer: [Adrian Vovk](https://github.com/AdrianVovk)
 
 carbonSHELL (or cSH) is the main graphical interface of [carbonOS](http://carbon.sh)
@@ -48,8 +45,6 @@ This is what building and running will look like in the near future:
 ```
 $ cd session/
 $ nix build
-$ result/bin/carbonos-session --config [...]
+$ result/bin/carbon-session
 ```
-**NOTE THAT THIS DOES NOT WORK YET!!**
-
-Also, a non-nix build process will be created to allow for packaging this for other distros.
+I will also be moving the entire project to Meson, allowing builds from outside Nix.
