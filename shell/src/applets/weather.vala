@@ -89,7 +89,8 @@ class WeatherApplet : Applet {
 		
 		Gtk.Button refresh_button = new Gtk.Button.with_label ("Refresh");
 		layout.pack_end (refresh_button);
-		
+
+		layout.margin = 4;
 		return layout;
 	}
 

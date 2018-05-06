@@ -44,6 +44,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 		bar.pack_start(new AppLauncher.from_id("org.gnome.Nautilus"));
 		bar.pack_start(new AppLauncher.from_id("org.gnome.Epiphany"));
 		bar.pack_start(new AppLauncher.from_id("org.gnome.Terminal"));
+		bar.pack_start(new AppLauncher.from_id("com.gexperts.Tilix"));
 
 		// Misc setup
 		this.set_default_size(displayWidth, -1);

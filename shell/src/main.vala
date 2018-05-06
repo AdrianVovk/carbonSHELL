@@ -40,6 +40,12 @@ class ShellApplication : Gtk.Application {
 			Gdk.Display disp = Gdk.Display.get_default();
 			connect_to_wayfire(disp);
 		} else print("Skipping Wayfire connection\n");
+
+		if (no_protos) { // TEST
+			Notify.Server.obtain ();
+			this.hold();
+			return 0;
+		}
 		
 		if (volup) { // Volume up requested
 			if (!panel_open) {
