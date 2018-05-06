@@ -17,6 +17,7 @@ class WeatherApplet : Applet {
 
 		// Today's view
 		Gtk.Box today = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+		today.margin = 4;
 		today.tooltip_text = "Now";
 		layout.add (today);
 		Gtk.Image today_icon = new Gtk.Image.from_icon_name("weather-clear-symbolic", Gtk.IconSize.INVALID);
@@ -39,6 +40,7 @@ class WeatherApplet : Applet {
 		layout.add (hourly_label);
 		Gtk.ScrolledWindow hourly_scroller = new Gtk.ScrolledWindow (null, null);
 		hourly_scroller.vscrollbar_policy = Gtk.PolicyType.NEVER;
+		hourly_scroller.margin = 4;
 		layout.add (hourly_scroller);
 		Gtk.Box scroll_container_hourly = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		hourly_scroller.add (scroll_container_hourly);
@@ -63,6 +65,7 @@ class WeatherApplet : Applet {
 		layout.add (upcoming_label);
 		Gtk.ScrolledWindow upcoming_scroller = new Gtk.ScrolledWindow (null, null);
 		upcoming_scroller.vscrollbar_policy = Gtk.PolicyType.NEVER;
+		upcoming_scroller.margin = 4;
 		layout.add (upcoming_scroller);
 		Gtk.Box scroll_container_upcoming = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		upcoming_scroller.add (scroll_container_upcoming);
@@ -89,8 +92,7 @@ class WeatherApplet : Applet {
 		
 		Gtk.Button refresh_button = new Gtk.Button.with_label ("Refresh");
 		layout.pack_end (refresh_button);
-
-		layout.margin = 4;
+		
 		return layout;
 	}
 

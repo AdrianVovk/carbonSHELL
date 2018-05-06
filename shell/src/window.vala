@@ -24,6 +24,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 	};
 
 	Gtk.HeaderBar tempBar = null;
+	
 	public PanelWindow(ShellApplication this_app) {
 		Object(application: this_app);
 		
@@ -33,8 +34,7 @@ class PanelWindow : Gtk.ApplicationWindow {
 	
 		// Create the bar
 		Gtk.HeaderBar bar = new Gtk.HeaderBar();
-		this.tempBar = null;
-		this.add(bar);
+		this.add (bar);
 
 		// Add static content to the panel
 		foreach (Applet applet in bar_start_items) bar.pack_start(applet.create());

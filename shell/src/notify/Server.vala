@@ -1,9 +1,11 @@
 [DBus (name = "org.freedesktop.Notifications")]
 public class Notify.Server : Object {
-	private static Notify.Server? instance = null;
-	public static Notify.Server obtain () {
+	private static Server? instance = null;
+
+	[DBus (visible = false)]
+	public static Server obtain () {
 		if (instance == null) {
-			instance = new Notify.Server ();
+			instance = new Server ();
 			Bus.own_name (BusType.SESSION, "org.freedesktop.Notifications", BusNameOwnerFlags.NONE,
 						  connection => {
 						  	try {
@@ -17,46 +19,69 @@ public class Notify.Server : Object {
 		return instance;
 	}
 
-	private Notify.Server () {
+	private Server () {
+		this.notifications = new GenericArray<Notification>();
 		notification_closed.connect (handle_notification_closed);
 	}
 
 	// NOTIFICATION MANAGEMENT
 
-	Notify.Notification[] notifications = {};
+	private GenericArray<Notification> notifications;
 
-	public Notify.Notification? get_notification (uint32 id) {
-		foreach (Notify.Notification notif in notifications) {
-			if (notif.id == id) return notif;
-		}
-		return null;
+	[DBus (visible = false)]
+	public Notification? get_notification (uint32 id, out uint index = null) {
+		Notification? out = null;
+		notifications.foreach (notif => {
+			if (notif.id == id) out = notif;
+		});
+		return out;
 	}
 
-	public void add_notification (Notify.Notification notif) {
+	[DBus (visible = false)]
+	public void add_notification (Notification notif) {
 		var old = this.get_notification (notif.id);
 		if (old != null) {
 			old.replace (notif);
-		} else {
-			notifications += notif;
-			curr_id++;
+		} else notifications.add (notif);
+		notif_added (notif);
+	}
+
+	[DBus (visible = false)]
+	public void handle_notification_closed (uint32 id, uint32 reason) {
+		var notification = this.get_notification (id);
+		if (notification != null) {
+			notifications.remove (notification);
+			curr_id = notification.id; // Search for new ID from here
+			notification.unref ();
 		}
 	}
 
-	public void handle_notification_closed (uint32 id, uint32 reason) {
-		this.get_notification (id).destroy ();
-	}
-
+	
 	private uint32 curr_id = 1;
 	private uint32 generate_new_id () {
-		for (int id = curr_id; id < int.MAX; id++) {
+		if (curr_id == int.MAX) curr_id = 1; // Just in case it rolls over
+		for (uint32 id = curr_id; id <= int.MAX; id++) {
 			if (get_notification (id) == null) {
 				curr_id = id;
 				return id;
 			}
 		}
-		error ("ID Generation error");
+		error ("Notify.Server: ID Generation error\n");
 		return -2;
 	}
+
+	[DBus (visible = false)]
+	public Notification[] get_all () {
+		return notifications.data;
+	}
+
+	[DBus (visible = false)]
+	public void invoke_added () {
+		notifications.foreach (it => notif_added (it));
+	}
+
+	[DBus (visible = false)]
+	public signal void notif_added (Notification notif);
 
 	// PROTOCOL
 
@@ -69,7 +94,8 @@ public class Notify.Server : Object {
 		return abilities;
 	}
 
-	public uint32 notify (string app_name,
+	// NOTE: Capital name here so it doesn't conflict with GObject's notify.
+	public uint32 Notify (string app_name,
 						  uint32 replaces_id,
 						  string app_icon,
 						  string summary,
@@ -79,7 +105,8 @@ public class Notify.Server : Object {
 						  int32 expire_timeout) {
 		
 		// Create a notification object
-		Notify.Notification n = new Notification ();
+		Notification n = new Notification ();
+		n.freeze_notify ();
 		n.app_name = app_name;
 		n.id = replaces_id == 0 ? generate_new_id () : replaces_id;
 		n.icon = app_icon;
@@ -88,11 +115,11 @@ public class Notify.Server : Object {
 		n.timeout = expire_timeout;
 		
 		// Populate the actions
-		Notify.Action[] temp = {};
-		Notify.Action? action = null;
+		Action[] temp = {};
+		Action? action = null;
 		for (int i = 0; i < actions.length; i += 2) {
 			if (i % 2 == 0) { // We have a new action
-				action = new Notify.Action ();
+				action = new Action ();
 				action.action = actions[i];
 				action.notif_id = n.id;
 			} else { // The action is created; commit it.
@@ -108,7 +135,7 @@ public class Notify.Server : Object {
 	}
 
 	public void close_notification (uint32 id) {
-		notification_closed (id, Notify.CloseReason.SELF);
+		notification_closed (id, CloseReason.SELF);
 	}
 
 	public void get_server_information (out string name,
@@ -124,10 +151,9 @@ public class Notify.Server : Object {
 	public signal void notification_closed (uint32 id, uint32 reason);
 
 	public signal void action_invoked (uint32 id, string action_key);
-
 }
 
-public enum Notify.CloseReason {
+public enum CloseReason {
 	EXPIRED = 1,
 	DISMISSED = 2,
 	SELF = 3,

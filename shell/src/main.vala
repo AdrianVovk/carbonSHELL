@@ -90,7 +90,7 @@ class ShellApplication : Gtk.Application {
 			command_line.print("Starting panel...");
 			this.hold();
 			PanelWindow window = new PanelWindow(this);
-			window.show_all();
+			window.show_all ();
 			if (!no_protos) set_panel(window);
 			return 0;
 		}

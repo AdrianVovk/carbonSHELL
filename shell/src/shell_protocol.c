@@ -43,7 +43,7 @@ static void output_destroyed(void *data, struct wayfire_shell *shell, uint32_t o
 static void output_autohide_panels(void *data, struct wayfire_shell *shell, uint32_t output, uint32_t autohide)
 {
 	if (autohide)
-		wayfire_shell_configure_panel(shell_instance, NULL, panel_surface, 0, 0 - panel_height);
+		wayfire_shell_configure_panel(shell_instance, NULL, panel_surface, 0, 5 - panel_height);
 	else
 		wayfire_shell_configure_panel(shell_instance, NULL, panel_surface, 0, 0);
 }

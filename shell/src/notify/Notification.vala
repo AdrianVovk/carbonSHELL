@@ -1,17 +1,17 @@
 public class Notify.Notification : Object {
-	public string app_name;
-	public uint32 id;
-	public string icon;
-	public string title;
-	public string body;
-	public int32 timeout;
+	public string app_name {set; get;}
+	public uint32 id {set; get;}
+	public string icon {set; get;}
+	public string title {set; get;}
+	public string body {set; get;}
+	public int32 timeout {set; get;}
 	
-	public Notify.Action[] actions;
+	public Action[] actions {set; get;}
 
 	// Actions
 
-	public Notify.Action? get_action (string action) {
-		foreach (Notify.Action act in this.actions) {
+	public Action? get_action (string action) {
+		foreach (Action act in this.actions) {
 			if (act.action == action) return act;
 		}
 		return null;
@@ -27,13 +27,13 @@ public class Notify.Notification : Object {
 		if (timeout == 0) return;		
 		int real_timeout = timeout;
 		Timeout.add (timeout != -1 ? timeout : 10000, () => {
-			this.dismiss (Notify.CloseReason.EXPIRED);
+			this.dismiss (CloseReason.EXPIRED);
 			return false;
 		});
 	}
 	
-	public void dismiss (int reason = Notify.CloseReason.DISMISSED) {
-		Notify.Server.obtain ().notification_closed (this.id, reason);
+	public void dismiss (int reason = CloseReason.DISMISSED) {
+		Server.obtain ().notification_closed (this.id, reason);
 	}
 
 	public string to_string () {
@@ -42,12 +42,12 @@ public class Notify.Notification : Object {
 		out += @"\tBODY: $body\n";
 		out += @"\tICON: $icon\n";
 		out += @"\tAPP: $app_name\n";
-		foreach (Notify.Action a in this.actions) out += @"\tACTION: $(a.display)\n";
+		foreach (Action a in this.actions) out += @"\tACTION: $(a.display)\n";
 		out += "}\n";
 		return out;
 	}
 
-	public void replace (Notify.Notification notif) {
+	public void replace (Notification notif) {
 		this.app_name = notif.app_name;
 		this.id = notif.id;
 		this.icon = notif.icon;
@@ -55,17 +55,17 @@ public class Notify.Notification : Object {
 		this.body = notif.body;
 		this.timeout = notif.timeout;
 		this.actions = notif.actions;
-		notif.destroy ();
+		notif.unref ();
 	}
 }
 
 public class Notify.Action : Object {
-	public string display;
+	public string display {set; get;}	
 	
-	public string action;
+	public string action {set; get;}
 	public uint32 notif_id;
 
 	public void invoke () {
-		Notify.Server.obtain ().action_invoked (notif_id, action);
+		Server.obtain ().action_invoked (notif_id, action);
 	}
 }
