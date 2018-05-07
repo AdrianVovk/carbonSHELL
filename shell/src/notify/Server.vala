@@ -22,6 +22,10 @@ public class Notify.Server : Object {
 	private Server () {
 		this.notifications = new GenericArray<Notification>();
 		notification_closed.connect (handle_notification_closed);
+
+		foreach (Notification n in Persist.obtain ().load ()) {
+			this.add_notification (n, true);
+		}
 	}
 
 	// NOTIFICATION MANAGEMENT
@@ -38,12 +42,13 @@ public class Notify.Server : Object {
 	}
 
 	[DBus (visible = false)]
-	public void add_notification (Notification notif) {
+	public void add_notification (Notification notif, bool nopersist = false) {
 		var old = this.get_notification (notif.id);
 		if (old != null) {
 			old.replace (notif);
 		} else notifications.add (notif);
 		notif_added (notif);
+		if (!nopersist) Persist.obtain ().update ();
 	}
 
 	[DBus (visible = false)]
@@ -53,6 +58,7 @@ public class Notify.Server : Object {
 			notifications.remove (notification);
 			curr_id = notification.id; // Search for new ID from here
 			notification.unref ();
+			Persist.obtain ().update ();
 		}
 	}
 
@@ -91,6 +97,7 @@ public class Notify.Server : Object {
 		abilities += "body-markup";
 		abilities += "icon-static";
 		abilities += "actions";
+		abilities += "persistence";
 		return abilities;
 	}
 
@@ -113,6 +120,7 @@ public class Notify.Server : Object {
 		n.title = summary;
 		n.body = body;
 		n.timeout = expire_timeout;
+		n.transient = hints.lookup ("transient").get_boolean ();
 		
 		// Populate the actions
 		Action[] temp = {};

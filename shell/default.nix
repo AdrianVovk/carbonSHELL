@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   src = ./src;
   phases = [ "buildPhase" "installPhase" ];
   nativeBuildInputs = [ vala pkgconfig ];
-  buildInputs = [ gtk3 accountsservice gnome3.libgee wayland wayland-protocols ];
+  buildInputs = [ gtk3 accountsservice gnome3.libgee wayland wayland-protocols json-glib ];
   
   buildPhase = ''
   	# Generate wayland bindings
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 	done
   
   	# Compile the various executables
-  	valac -o shell --vapidir $src/vapi --pkg gtk+-3.0 --pkg gio-unix-2.0 --pkg accountsservice $src/utils/*.vala $src/applets/*.vala $src/notify/*.vala $src/*.vala $src/*.c \
+  	valac -o shell --vapidir $src/vapi --pkg gtk+-3.0 --pkg gio-unix-2.0 --pkg json-glib-1.0 $src/utils/*.vala $src/applets/*.vala $src/notify/*.vala $src/*.vala $src/*.c \
   		./gen/wayfire-shell-protocol.c -X -I./gen -X -Wl,-rpath,${pkgs.wayland}/lib/
   	
   	valac -o decorator --vapidir ${gnome3.libgee}/share/vala/vapi --pkg gtk+-3.0 --pkg gee-0.8 $src/decorator/*.vala $src/decorator/*.c \

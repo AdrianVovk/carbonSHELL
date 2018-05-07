@@ -5,6 +5,7 @@ public class Notify.Notification : Object {
 	public string title {set; get;}
 	public string body {set; get;}
 	public int32 timeout {set; get;}
+	public bool transient {set; get;}
 	
 	public Action[] actions {set; get;}
 
@@ -37,13 +38,14 @@ public class Notify.Notification : Object {
 	}
 
 	public string to_string () {
-		string out = "NOTIFICATION: {\n";
-		out += @"\tTITLE: $title\n";
-		out += @"\tBODY: $body\n";
-		out += @"\tICON: $icon\n";
-		out += @"\tAPP: $app_name\n";
-		foreach (Action a in this.actions) out += @"\tACTION: $(a.display)\n";
-		out += "}\n";
+		var node = Json.gobject_serialize(this);
+		return Json.to_string (node, false);
+	}
+
+	public static Notification from_data (string data) {
+		var out = new Notification ();
+		out.freeze_notify ();
+		out.replace (Json.gobject_from_data (typeof (Notification), data) as Notification);
 		return out;
 	}
 
@@ -54,6 +56,7 @@ public class Notify.Notification : Object {
 		this.title = notif.title;
 		this.body = notif.body;
 		this.timeout = notif.timeout;
+		this.transient = notif.transient;
 		this.actions = notif.actions;
 		notif.unref ();
 	}

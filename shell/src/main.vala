@@ -41,11 +41,7 @@ class ShellApplication : Gtk.Application {
 			connect_to_wayfire(disp);
 		} else print("Skipping Wayfire connection\n");
 
-		if (no_protos) { // TEST
-			Notify.Server.obtain ();
-			this.hold();
-			return 0;
-		}
+		if (no_protos) Notify.Persist.obtain ().load ();
 		
 		if (volup) { // Volume up requested
 			if (!panel_open) {
