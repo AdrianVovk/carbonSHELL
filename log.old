@@ -1,0 +1,1635 @@
+2018-05-07 00:31:37 - [src/main.cpp:68] Starting wayfire
+2018-05-07 00:31:37 - [backend/session/logind.c:398] Successfully loaded logind session
+2018-05-07 00:31:38 - [backend/backend.c:153] Found 1 GPUs
+2018-05-07 00:31:38 - [backend/drm/backend.c:123] Initializing DRM backend for /dev/dri/card0 (i915)
+2018-05-07 00:31:38 - [backend/drm/drm.c:42] Using atomic DRM interface
+2018-05-07 00:31:38 - [backend/drm/drm.c:132] Found 2 DRM CRTCs
+2018-05-07 00:31:38 - [backend/drm/drm.c:63] Found 6 DRM planes
+2018-05-07 00:31:38 - [backend/drm/drm.c:105] (2 overlay, 2 primary, 2 cursor)
+2018-05-07 00:31:38 - [render/egl.c:160] Using EGL 1.4
+2018-05-07 00:31:38 - [render/egl.c:161] Supported EGL extensions: EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_KHR_config_attribs EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_image_dma_buf_export EGL_WL_bind_wayland_display 
+2018-05-07 00:31:38 - [render/egl.c:162] EGL vendor: Mesa Project
+2018-05-07 00:31:38 - [render/egl.c:99] Supported dmabuf buffer formats: AR24 AB24 XR24 XB24 AR15 RG16 R8   R16  GR88 GR32 YUV9 YU11 YU12 YU16 YU24 YVU9 YV11 YV12 YV16 YV24 NV12 NV16 YUYV UYVY 
+2018-05-07 00:31:38 - [render/gles2/renderer.c:468] Using OpenGL ES 3.2 Mesa 17.3.6
+2018-05-07 00:31:38 - [render/gles2/renderer.c:469] GL vendor: Intel Open Source Technology Center
+2018-05-07 00:31:38 - [render/gles2/renderer.c:470] Supported GLES2 extensions: GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_filter_anisotropic GL_EXT_texture_compression_dxt1 GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_EXT_frag_depth GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_OES_viewport_array GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_robustness GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_EXT_draw_buffers GL_EXT_map_buffer_range GL_KHR_debug GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_OES_depth_texture_cube_map GL_OES_required_internalformat GL_OES_surfaceless_context GL_EXT_color_buffer_float GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_integer_mix GL_EXT_tessellation_point_size GL_EXT_tessellation_shader GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_ANDROID_extension_pack_es31a GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_copy_image GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_gpu_shader5 GL_EXT_polygon_offset_clamp GL_EXT_primitive_bounding_box GL_EXT_shader_io_blocks GL_EXT_texture_border_clamp GL_EXT_texture_buffer GL_EXT_texture_cube_map_array GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_robust_buffer_access_behavior GL_NV_image_formats GL_OES_copy_image GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_gpu_shader5 GL_OES_primitive_bounding_box GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_io_blocks GL_OES_shader_multisample_interpolation GL_OES_tessellation_point_size GL_OES_tessellation_shader GL_OES_texture_border_clamp GL_OES_texture_buffer GL_OES_texture_cube_map_array GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_EXT_blend_func_extended GL_EXT_buffer_storage GL_EXT_geometry_point_size GL_EXT_geometry_shader GL_EXT_shader_samples_identical GL_KHR_no_error GL_KHR_texture_compression_astc_sliced_3d GL_OES_geometry_point_size GL_OES_geometry_shader GL_OES_shader_image_atomic GL_EXT_clip_cull_distance GL_MESA_shader_integer_functions 
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 5 inst, 0 loops, 24 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 80 to 48 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 5 inst, 0 loops, 34 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 80 to 48 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 16 inst, 0 loops, 60 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 256 to 176 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 17 inst, 0 loops, 148 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 272 to 208 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 17 inst, 0 loops, 178 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 272 to 192 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 20 inst, 0 loops, 82 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 320 to 208 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 8 inst, 0 loops, 244 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 8 inst, 0 loops, 260 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 20 inst, 0 loops, 76 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 320 to 240 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 8 inst, 0 loops, 242 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 8 inst, 0 loops, 256 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 20 inst, 0 loops, 76 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 320 to 240 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 8 inst, 0 loops, 244 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 8 inst, 0 loops, 260 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 20 inst, 0 loops, 76 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 320 to 240 bytes.
+2018-05-07 00:31:38 - [src/main.cpp:85] using config file: wayfire/config.ini
+2018-05-07 00:31:38 - [xwayland/sockets.c:47] Failed to bind socket @/tmp/.X11-unix/X0: Address already in use
+2018-05-07 00:31:38 - [src/view.cpp:1776] xwayland display started at1
+2018-05-07 00:31:38 - [src/img.cpp:237] init ImageIO
+2018-05-07 00:31:38 - [backend/drm/drm.c:748] Scanning DRM connectors
+2018-05-07 00:31:38 - [xwayland/xwayland.c:124] WAYLAND_SOCKET=16 Xwayland :1 -rootless -terminate -listen 14 -listen 15 -wm 18
+2018-05-07 00:31:38 - [xwayland/xwayland.c:308] failed to exec Xwayland: No such file or directory
+2018-05-07 00:31:38 - [xwayland/xwayland.c:317] sent SIGUSR1 to process 20634
+2018-05-07 00:31:38 - [backend/drm/drm.c:811] Found display 'eDP-1'
+2018-05-07 00:31:38 - [backend/drm/drm.c:829] 'eDP-1' connected
+2018-05-07 00:31:38 - [backend/drm/drm.c:834] Physical size: 600x340
+2018-05-07 00:31:38 - [backend/drm/drm.c:845] Detected modes:
+2018-05-07 00:31:38 - [backend/drm/drm.c:860]   3840@2160@59997
+2018-05-07 00:31:38 - [backend/drm/drm.c:869] Sending modesetting signal for 'eDP-1'
+2018-05-07 00:31:38 - [src/core.cpp:1317] add new output: eDP-1
+2018-05-07 00:31:38 - [backend/drm/drm.c:471] Modesetting 'eDP-1' with '3840x2160@59997 mHz'
+2018-05-07 00:31:38 - [backend/drm/drm.c:494] eDP-1: crtc=0 ovr=0 pri=0 cur=0
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 5 inst, 0 loops, 24 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 80 to 48 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 5 inst, 0 loops, 34 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 80 to 48 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 22 inst, 0 loops, 86 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 352 to 288 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 2 inst, 0 loops, 0 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 32 to 32 bytes.
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libviewport_impl.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libautostart.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libmove.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libresize.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libgrid.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libexpo.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libcommand.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libswitcher.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libanimate.so
+2018-05-07 00:31:38 - [src/output.cpp:98] loading plugin /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib//wayfire//libdecoration.so
+2018-05-07 00:31:38 - [src/core.cpp:1413] focus output: eDP-1
+** Message: 00:31:38.178: main.vala:6: Hello
+
+(decorator:20638): Gtk-WARNING **: 00:31:38.180: Locale not supported by C library.
+	Using the fallback 'C' locale.
+2018-05-07 00:31:38 - [backend/drm/drm.c:811] Found display 'HDMI-A-1'
+2018-05-07 00:31:38 - [backend/libinput/backend.c:49] Initializing libinput
+
+(shell:20640): Gtk-WARNING **: 00:31:38.182: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(shell:20642): Gtk-WARNING **: 00:31:38.188: Locale not supported by C library.
+	Using the fallback 'C' locale.
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Power Button [0:1]
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:242] Loaded cursor theme 'default', available cursors:
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] bottom_left_corner (1 images) 16x16+1,14
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] bottom_right_corner (1 images) 16x16+14,14
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] bottom_side (1 images) 15x16+7,14
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] grabbing (1 images) 16x16+8,8
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] left_ptr (1 images) 10x16+1,1
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] left_side (1 images) 16x15+1,7
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] right_side (1 images) 16x15+14,7
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] top_left_corner (1 images) 16x16+1,1
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] top_right_corner (1 images) 16x16+14,1
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] top_side (1 images) 15x16+7,1
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] xterm (1 images) 9x16+4,8
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] hand1 (1 images) 13x16+12,0
+2018-05-07 00:31:38 - [xcursor/wlr_xcursor.c:248] watch (1 images) 16x16+15,9
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Video Bus [0:6]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Video Bus [0:6]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Power Button [0:1]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Sleep Button [0:3]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Logitech MX Master 2S [1133:16489]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Cooler Master Technology Inc. MasterKeys S [9494:87]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Cooler Master Technology Inc. MasterKeys S [9494:87]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added ILITEK ILITEK Multi-Touch [8746:218]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Intel(R) RealSense(TM) 3D Camer [32902:2662]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added Intel(R) RealSense(TM) 3D Camer [32902:2662]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH Mic [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH Front Headphone [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH HDMI/DP,pcm=3 [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH HDMI/DP,pcm=7 [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH HDMI/DP,pcm=8 [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH HDMI/DP,pcm=9 [0:0]
+2018-05-07 00:31:38 - [backend/libinput/events.c:81] Added HDA Intel PCH HDMI/DP,pcm=10 [0:0]
+2018-05-07 00:31:38 - [backend/libinput/backend.c:95] libinput sucessfully initialized
+2018-05-07 00:31:38 - [src/main.cpp:118] runnign at server wayland-0
+/bin/bash: /nix/store/4zbjc3qdshagk6nq0y69g2j1z6c8sw4w-wayfire-0.0.0/lib/wayfire/wayfire-shell-client: No such file or directory
+2018-05-07 00:31:38 - [xwayland/xwayland.c:213] Xwayland startup failed, not setting up xwm
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 8 inst, 0 loops, 244 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 8 inst, 0 loops, 260 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 128 to 80 bytes.
+2018-05-07 00:31:38 - [GLES2] VS SIMD8 shader: 16 inst, 0 loops, 60 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 256 to 192 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD8 shader: 18 inst, 0 loops, 310 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 288 to 208 bytes.
+2018-05-07 00:31:38 - [GLES2] FS SIMD16 shader: 18 inst, 0 loops, 328 cycles, 0:0 spills:fills, Promoted 0 constants, compacted 288 to 208 bytes.
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1351c50 (res 0x131af90)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1347650 (res 0x1319020)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x11a4380 (res 0x1300f40)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1347850 (res 0x133a370)
+
+** (decorator:20638): WARNING **: 00:31:38.246: Could not open X display
+
+** (shell:20640): WARNING **: 00:31:38.246: Could not open X display
+[Decorator] Connected to Wayfire
+Service is running.
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:105] bind
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+** (decorator:20638): WARNING **: 00:31:38.286: AT-SPI: Could not obtain desktop path or name
+
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.286: g_variant_get_string: assertion 'value != NULL' failed
+Starting Wayfire Shell Service...
+[Shell] Connected to Wayfire
+Starting panel...
+(shell:20640): Gdk-CRITICAL **: 00:31:38.289: gdk_wayland_display_get_monitor_at_window: assertion 'GDK_IS_WAYLAND_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.289: gdk_window_get_origin: assertion 'GDK_IS_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.289: gdk_wayland_display_get_monitor_at_window: assertion 'GDK_IS_WAYLAND_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.289: gdk_window_get_origin: assertion 'GDK_IS_WINDOW (window)' failed
+
+** (decorator:20638): WARNING **: 00:31:38.299: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:31:38.299: atk-bridge: get_device_events_reply: unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.299: atk-bridge: get_device_events_reply: unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.299: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.311: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:31:38.311: atk-bridge: get_device_events_reply: unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.311: atk-bridge: get_device_events_reply: unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.311: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (shell:20640): CRITICAL **: 00:31:38.328: network_applet_create_wifi_tile: assertion 'status_icon_name != NULL' failed
+
+(shell:20640): Gtk-CRITICAL **: 00:31:38.328: gtk_container_add: assertion 'GTK_IS_WIDGET (widget)' failed
+
+** (shell:20640): WARNING **: 00:31:38.342: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x13518d0 (res 0x131bad0)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1329970 (res 0x133aa30)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1348300 (res 0x1303300)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x134a410 (res 0x11b8150)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x134b2b0 (res 0x13041a0)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x134df70 (res 0x132cad0)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x134a7d0 (res 0xb80e30)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x134a9b0 (res 0x1336870)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x13540e0 (res 0x1339830)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1354390 (res 0x1303660)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1348740 (res 0x131d540)
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x13489f0 (res 0x1335d30)
+2018-05-07 00:31:38 - [types/wlr_xdg_shell_v6.c:1369] new xdg_surface 0x1348ca0 (res 0x1339710)
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:60] got with title shell 0
+2018-05-07 00:31:38 - [src/view.cpp:1424] core add view for surf 0x1348ca0
+2018-05-07 00:31:38 - [src/view.cpp:1080] new xdg_shell_v6 surface: shell app-id: shell
+2018-05-07 00:31:38 - [src/output.cpp:845] wf_shell: add_panel
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:392] send autohide 0
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 0
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 16
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:38 - [src/output.cpp:909] wf_shell: reserve width:1920 height: 47
+Output Created
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.344: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+Already connecting to Wayfire
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.344: gdk_wayland_display_get_monitor_at_window: assertion 'GDK_IS_WAYLAND_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.344: gdk_window_get_origin: assertion 'GDK_IS_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.344: gdk_wayland_display_get_monitor_at_window: assertion 'GDK_IS_WAYLAND_WINDOW (window)' failed
+
+(shell:20640): Gdk-CRITICAL **: 00:31:38.344: gdk_window_get_origin: assertion 'GDK_IS_WINDOW (window)' failed
+Opening wallpaper: /home/adrian/Development/desktop/wallpapers/spacex.jpg
+** (decorator:20638): WARNING **: 00:31:38.352: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:31:38.406: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:31:38 - [types/wlr_surface.c:644] New wlr_surface 0x1348db0 (res 0x11b8250)
+2018-05-07 00:31:38 - [types/wlr_xdg_shell_v6.c:1369] new xdg_surface 0x134d140 (res 0x1328c00)
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:60] got with title shell 0
+2018-05-07 00:31:38 - [src/view.cpp:1424] core add view for surf 0x134d140
+2018-05-07 00:31:38 - [src/view.cpp:1080] new xdg_shell_v6 surface: shell app-id: shell
+
+** (shell:20640): WARNING **: 00:31:38.406: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:31:38 - [src/output.cpp:822] wf_shell: add_background to eDP-1
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:392] send autohide 0
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 0
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 1
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 0
+
+** (shell:20640): WARNING **: 00:31:38.406: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.406: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.406: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (decorator:20638): WARNING **: 00:31:38.415: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: get_device_events_reply: unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (shell:20640): WARNING **: 00:31:38.500: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:139] new view 0x133b210
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:60] got with title shell 0
+
+** (shell:20640): WARNING **: 00:31:38.511: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:31:38.511: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:31:38.511: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:139] new view 0x133b210
+2018-05-07 00:31:38 - [plugins/decor/decoration.cpp:60] got with title shell 0
+
+(shell:20666): Gtk-WARNING **: 00:31:38.881: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_type: assertion 'value != NULL' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(shell:20640): GLib-CRITICAL **: 00:31:38.886: g_variant_get_string: assertion 'value != NULL' failed
+Already connecting to Wayfire
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+
+(shell:20640): Gtk-WARNING **: 00:31:43.443: Drawing a gadget with negative dimensions. Did you forget to allocate a size? (node image owner GtkSearchEntry)
+2018-05-07 00:31:49 - [types/wlr_surface.c:644] New wlr_surface 0x135fac0 (res 0x13362d0)
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:31:55 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+[Panel] Lost focus. Collapsing all popovers.
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x134eca0 (res 0x134ec10)
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x13521a0 (res 0x1352110)
+
+** (shell:20640): WARNING **: 00:32:01.463: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:01.463: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x136a390 (res 0x136a300)
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x136a760 (res 0x136a6d0)
+
+** (decorator:20638): WARNING **: 00:32:01.567: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:01.567: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x135d150 (res 0x1360dc0)
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x136b0e0 (res 0x136b050)
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x136b420 (res 0x136b390)
+2018-05-07 00:32:01 - [types/wlr_surface.c:644] New wlr_surface 0x136b420 (res 0x136b390)
+2018-05-07 00:32:01 - [types/wlr_xdg_shell_v6.c:1369] new xdg_surface 0x136b7a0 (res 0x136b8b0)
+2018-05-07 00:32:01 - [plugins/decor/decoration.cpp:60] got with title Terminal 0
+2018-05-07 00:32:01 - [src/view.cpp:1424] core add view for surf 0x136b7a0
+2018-05-07 00:32:01 - [src/view.cpp:1080] new xdg_shell_v6 surface: Terminal app-id: gnome-terminal-server
+# Could not open X display
+
+** (decorator:20638): WARNING **: 00:32:01.660: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:01.660: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:01.670: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:01.670: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 4
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:392] send autohide 0
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:01 - [plugins/animate/animate.cpp:44] create animation
+2018-05-07 00:32:01 - [plugins/decor/decoration.cpp:139] new view 0x133b210
+2018-05-07 00:32:01 - [plugins/decor/decoration.cpp:60] got with title Terminal 0
+[Panel] Lost focus. Collapsing all popovers.
+2018-05-07 00:32:01 - [src/opengl.cpp:297] new fb 1572 1100 4294967295 4294967295
+2018-05-07 00:32:01 - [src/opengl.cpp:319] gl::: !!!! 36053 36053
+2018-05-07 00:32:01 - [src/opengl.cpp:323] initialized framebuffer 1 with attachment 13
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [src/output.cpp:1288] output eDP-1: activate plugin move
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [src/output.cpp:1299] output eDP-1: deactivate plugin move
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:22 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x1365910 (res 0x1365880)
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x13630b0 (res 0x1363020)
+
+** (epiphany:20769): WARNING **: 00:32:29.771: Could not open X display
+
+** (decorator:20638): WARNING **: 00:32:29.784: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:29.784: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:29.809: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:29.822: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:29.822: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:29.904: atk-bridge: get_device_events_reply: unknown signature
+
+** (epiphany:20769): WARNING **: 00:32:29.904: atk-bridge: get_device_events_reply: unknown signature
+
+** (epiphany:20769): WARNING **: 00:32:29.904: atk-bridge: GetRegisteredEvents returned message with unknown signature
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137c320 (res 0x1363980)
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137c5d0 (res 0x1374ce0)
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137cbb0 (res 0x1363280)
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137ce60 (res 0x137c230)
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137d110 (res 0x137c6e0)
+2018-05-07 00:32:29 - [types/wlr_xdg_shell_v6.c:1369] new xdg_surface 0x137d3c0 (res 0x137d4d0)
+2018-05-07 00:32:29 - [plugins/decor/decoration.cpp:60] got with title (7) Yanntek - Moving On (Au5 Remix) - YouTube 0
+2018-05-07 00:32:29 - [src/view.cpp:1424] core add view for surf 0x137d3c0
+2018-05-07 00:32:29 - [src/view.cpp:1080] new xdg_shell_v6 surface: (7) Yanntek - Moving On (Au5 Remix) - YouTube app-id: epiphany
+
+** (decorator:20638): WARNING **: 00:32:29.917: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:29.917: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:29 - [types/wlr_surface.c:644] New wlr_surface 0x137d770 (res 0x137d6e0)
+
+** (epiphany:20769): WARNING **: 00:32:29.923: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer 4
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:392] send autohide 0
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:29 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:29 - [plugins/animate/animate.cpp:44] create animation
+2018-05-07 00:32:29 - [plugins/decor/decoration.cpp:139] new view 0x133b210
+2018-05-07 00:32:29 - [plugins/decor/decoration.cpp:60] got with title (7) Yanntek - Moving On (Au5 Remix) - YouTube 0
+[Panel] Lost focus. Collapsing all popovers.
+2018-05-07 00:32:29 - [src/opengl.cpp:297] new fb 2672 1482 4294967295 4294967295
+2018-05-07 00:32:29 - [src/opengl.cpp:319] gl::: !!!! 36053 36053
+2018-05-07 00:32:29 - [src/opengl.cpp:323] initialized framebuffer 2 with attachment 29
+
+** (decorator:20638): WARNING **: 00:32:29.943: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:29.943: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:29.959: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:29.977: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:29.977: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:29.991: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.015: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.015: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.015: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.040: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.040: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.040: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.040: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x138c090 (res 0x138c000)
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x138c460 (res 0x138c3d0)
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.237: Could not open X display
+
+** (decorator:20638): WARNING **: 00:32:30.251: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.252: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.252: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.273: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.290: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.290: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.290: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1391d50 (res 0x1391cc0)
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1392120 (res 0x1392090)
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.309: Could not open X display
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1392b10 (res 0x1392a80)
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1392ee0 (res 0x1392e50)
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.312: Could not open X display
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1393900 (res 0x1393870)
+2018-05-07 00:32:30 - [types/wlr_surface.c:644] New wlr_surface 0x1393cd0 (res 0x1393c40)
+
+** (epiphany:20769): WARNING **: 00:32:30.325: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.325: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.325: Could not open X display
+
+** (decorator:20638): WARNING **: 00:32:30.325: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.338: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.338: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.338: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.342: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.346: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.351: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.358: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.358: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.358: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.366: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.366: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.367: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (shell:20640): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.383: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.401: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.401: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.401: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.401: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.401: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.429: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.429: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.429: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.429: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.430: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.430: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.430: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.430: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.444: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.462: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.462: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.462: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (shell:20640): WARNING **: 00:32:30.466: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.466: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.466: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.466: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.466: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.471: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.471: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.471: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.471: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.471: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.472: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.488: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.489: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.489: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.489: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.489: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.489: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.492: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:32:30.507: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:30 - [src/output.cpp:1288] output eDP-1: activate plugin move
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:30 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:31 - [src/output.cpp:1299] output eDP-1: deactivate plugin move
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:31 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:32:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:12 - [src/output.cpp:1288] output eDP-1: activate plugin switcher
+2018-05-07 00:33:12 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:12 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [plugins/single_plugins/switcher.cpp:298] handle key 56 28 0 1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:13 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:13 - [src/output.cpp:1299] output eDP-1: deactivate plugin switcher
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:16 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:20 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:20 - [src/output.cpp:1288] output eDP-1: activate plugin resize
+2018-05-07 00:33:24 - [src/output.cpp:1299] output eDP-1: deactivate plugin resize
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:24 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:49 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [types/wlr_surface.c:644] New wlr_surface 0x13743f0 (res 0x1376d80)
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:33:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:37 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:40 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:41 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:45 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:46 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:34:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:34:52 - [types/wlr_surface.c:644] New wlr_surface 0x1373e50 (res 0x1352150)
+2018-05-07 00:34:52 - [types/wlr_surface.c:644] New wlr_surface 0x139ad20 (res 0x13521e0)
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.722: Could not open X display
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.735: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.746: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.756: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.816: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.816: atk-bridge: get_device_events_reply: unknown signature
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.816: atk-bridge: GetRegisteredEvents returned message with unknown signature
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.832: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.857: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.868: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.868: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.900: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.901: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.919: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20978): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20786): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20803): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (shell:20640): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20801): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (WebKitWebProcess:20798): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (decorator:20638): WARNING **: 00:34:52.936: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.938: AT-SPI: Could not obtain desktop path or name
+
+
+** (epiphany:20769): WARNING **: 00:34:52.938: AT-SPI: Could not obtain desktop path or name
+
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:07 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:34 - [types/wlr_surface.c:644] New wlr_surface 0x139c1f0 (res 0x139b5f0)
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:38 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:39 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:43 - [types/wlr_surface.c:644] New wlr_surface 0x139f060 (res 0x139d910)
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:44 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+[Panel] Lost focus. Collapsing all popovers.
+2018-05-07 00:35:46 - [types/wlr_surface.c:644] New wlr_surface 0x139f770 (res 0x139ab00)
+2018-05-07 00:35:46 - [types/wlr_surface.c:644] New wlr_surface 0x139f770 (res 0x13a0d50)
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:47 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 4
+2018-05-07 00:35:47 - [types/wlr_surface.c:644] New wlr_surface 0x139f770 (res 0x139b4d0)
+2018-05-07 00:35:48 - [types/wlr_surface.c:644] New wlr_surface 0x13a2a10 (res 0x139e300)
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+[Panel] Lost focus. Collapsing all popovers.
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:35:50 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:01 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:34 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:35 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:36:43 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:36:43 - [src/output.cpp:1288] output eDP-1: activate plugin resize
+2018-05-07 00:36:43 - [src/output.cpp:1299] output eDP-1: deactivate plugin resize
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:19 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:42 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:37:48 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:02 - [src/output.cpp:1288] output eDP-1: activate plugin switcher
+2018-05-07 00:38:02 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:02 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [plugins/single_plugins/switcher.cpp:298] handle key 56 28 0 1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:03 - [src/output.cpp:1299] output eDP-1: deactivate plugin switcher
+2018-05-07 00:38:03 - [src/output.cpp:1288] output eDP-1: activate plugin switcher
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:03 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [plugins/single_plugins/switcher.cpp:298] handle key 15 28 0 1
+2018-05-07 00:38:04 - [plugins/single_plugins/switcher.cpp:298] handle key 56 28 0 1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:04 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:04 - [src/output.cpp:1299] output eDP-1: deactivate plugin switcher
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:08 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:10 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:11 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:15 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:18 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:26 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [src/output.cpp:1288] output eDP-1: activate plugin switcher
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/switcher.cpp:298] handle key 56 28 0 1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [src/output.cpp:1299] output eDP-1: deactivate plugin switcher
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:32 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [src/output.cpp:1288] output eDP-1: activate plugin switcher
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [plugins/single_plugins/switcher.cpp:298] handle key 15 28 0 1
+2018-05-07 00:38:36 - [plugins/single_plugins/switcher.cpp:298] handle key 56 28 0 1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:160] add to layer -1
+2018-05-07 00:38:36 - [plugins/single_plugins/viewport-impl.cpp:183] add to layer 2
+2018-05-07 00:38:36 - [src/output.cpp:1299] output eDP-1: deactivate plugin switcher
+2018-05-07 00:39:29 - [src/core.cpp:1340] removing output: eDP-1
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.790: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.834: Error reading events from display: Broken pipe
+Gdk-Message: 00:39:29.834: Error reading events from display: Broken pipe

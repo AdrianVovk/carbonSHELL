@@ -1,4 +1,4 @@
-	using Gtk;
+using Gtk;
 
 const bool APPS_GRID = true;
 
@@ -24,6 +24,7 @@ class AppsListApplet : Applet {
 		// The scrolling contents of the popup
 		Gtk.ScrolledWindow apps_scroller = new Gtk.ScrolledWindow(null, null);
 		apps_scroller.set_policy(Gtk.PolicyType.EXTERNAL, Gtk.PolicyType.AUTOMATIC);
+		//apps_scroller.propagate_natural_height = true;
 
 		// The grid/list for the apps
 		Gtk.FlowBox apps_container = new Gtk.FlowBox();
@@ -31,17 +32,27 @@ class AppsListApplet : Applet {
 		apps_container.orientation = Gtk.Orientation.HORIZONTAL;
 		apps_container.homogeneous = true;
 		if (!APPS_GRID) apps_container.max_children_per_line = 1;
-		apps_scroller.add(apps_container);
+
+		Gtk.Box padding_corrector = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+		padding_corrector.pack_start (apps_container, false);
+		apps_scroller.add (padding_corrector);
 
 		// Search box
 		string query = "";
+		int first_index = -1;
 		Gtk.SearchEntry search_box = new Gtk.SearchEntry();
 		search_box.search_changed.connect(() => {
 			query = search_box.get_text();
+			first_index = -1;
 			apps_container.invalidate_filter();
 		});
 		search_box.activate.connect(() => {
-			// TODO: Run the first item
+			if (first_index != -1) {
+				DesktopAppInfo app = apps_container.get_child_at_index (first_index)
+										.get_data<DesktopAppInfo>("app_details");
+				launch (app);
+				this.popup.popdown ();
+			}
 		});
 		this.popup.closed.connect(() => {
 			search_box.set_text ("");
@@ -51,7 +62,9 @@ class AppsListApplet : Applet {
 		// Filter functionality
 		apps_container.set_filter_func(elem => {
 			DesktopAppInfo app = elem.get_data<DesktopAppInfo>("app_details");
-			return filter_app(app, query);
+			bool ok = filter_app(app, query);
+			if (ok && first_index == -1) first_index = elem.get_index ();
+			return ok;
 		});
 
 		for_each_app(app => {
@@ -88,7 +101,7 @@ class AppsListApplet : Applet {
 		});
 
 		panel_layout.pack_start(search_box, false);
-		panel_layout.pack_start(apps_scroller, true);
+		panel_layout.pack_start(apps_scroller);
 		return panel_layout;
 	}
 }
