@@ -1,3 +1,6 @@
+**PLEASE GO TO THIS REPO'S UP TO DATE LOCATION, https://source.carbon.sh**
+
+
 # carbonSHELL
 Maintainer: [Adrian Vovk](https://github.com/AdrianVovk)
 
